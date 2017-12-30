@@ -1,0 +1,371 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:switches
+LIBS:relays
+LIBS:motors
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "ATtiny13 IR beacon"
+Date "2017-12-30"
+Rev "0.1.0"
+Comp "Piotr Bakalarski <piotr@0bit.pw>"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L +3V3 #PWR?
+U 1 1 5A46F54C
+P 3300 2950
+F 0 "#PWR?" H 3300 2800 50  0001 C CNN
+F 1 "+3V3" H 3300 3090 50  0000 C CNN
+F 2 "" H 3300 2950 50  0001 C CNN
+F 3 "" H 3300 2950 50  0001 C CNN
+	1    3300 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L R_Small R?
+U 1 1 5A46F571
+P 3500 2950
+F 0 "R?" H 3530 2970 50  0000 L CNN
+F 1 "10R" H 3530 2910 50  0000 L CNN
+F 2 "" H 3500 2950 50  0001 C CNN
+F 3 "" H 3500 2950 50  0001 C CNN
+	1    3500 2950
+	0    1    1    0   
+$EndComp
+$Comp
+L R_Small R?
+U 1 1 5A46F5A2
+P 3750 2950
+F 0 "R?" H 3780 2970 50  0000 L CNN
+F 1 "10R" H 3780 2910 50  0000 L CNN
+F 2 "" H 3750 2950 50  0001 C CNN
+F 3 "" H 3750 2950 50  0001 C CNN
+	1    3750 2950
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5A46F5CA
+P 3300 3500
+F 0 "#PWR?" H 3300 3250 50  0001 C CNN
+F 1 "GND" H 3300 3350 50  0000 C CNN
+F 2 "" H 3300 3500 50  0001 C CNN
+F 3 "" H 3300 3500 50  0001 C CNN
+	1    3300 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP1 C?
+U 1 1 5A46F5E4
+P 3950 3250
+F 0 "C?" H 3975 3350 50  0000 L CNN
+F 1 "3300uF" H 3975 3150 50  0000 L CNN
+F 2 "" H 3950 3250 50  0001 C CNN
+F 3 "" H 3950 3250 50  0001 C CNN
+	1    3950 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP1 C?
+U 1 1 5A46F62A
+P 4300 3250
+F 0 "C?" H 4325 3350 50  0000 L CNN
+F 1 "220uF" H 4325 3150 50  0000 L CNN
+F 2 "" H 4300 3250 50  0001 C CNN
+F 3 "" H 4300 3250 50  0001 C CNN
+	1    4300 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP1 C?
+U 1 1 5A46F64C
+P 4600 3250
+F 0 "C?" H 4625 3350 50  0000 L CNN
+F 1 "220uF" H 4625 3150 50  0000 L CNN
+F 2 "" H 4600 3250 50  0001 C CNN
+F 3 "" H 4600 3250 50  0001 C CNN
+	1    4600 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 5A46F67B
+P 5200 3250
+F 0 "C?" H 5225 3350 50  0000 L CNN
+F 1 "100nF" H 5225 3150 50  0000 L CNN
+F 2 "" H 5238 3100 50  0001 C CNN
+F 3 "" H 5200 3250 50  0001 C CNN
+	1    5200 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP1 C?
+U 1 1 5A46F7A4
+P 4900 3250
+F 0 "C?" H 4925 3350 50  0000 L CNN
+F 1 "100uF" H 4925 3150 50  0000 L CNN
+F 2 "" H 4900 3250 50  0001 C CNN
+F 3 "" H 4900 3250 50  0001 C CNN
+	1    4900 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 2950 3400 2950
+Wire Wire Line
+	3600 2950 3650 2950
+Wire Wire Line
+	3850 2950 5300 2950
+Wire Wire Line
+	5200 2950 5200 3100
+Wire Wire Line
+	4900 3100 4900 2950
+Connection ~ 4900 2950
+Wire Wire Line
+	4600 3100 4600 2950
+Connection ~ 4600 2950
+Wire Wire Line
+	4300 3100 4300 2950
+Connection ~ 4300 2950
+Wire Wire Line
+	3950 3100 3950 2950
+Connection ~ 3950 2950
+Wire Wire Line
+	3300 3500 5200 3500
+Wire Wire Line
+	3950 3500 3950 3400
+Wire Wire Line
+	4300 3500 4300 3400
+Connection ~ 3950 3500
+Wire Wire Line
+	4600 3500 4600 3400
+Connection ~ 4300 3500
+Wire Wire Line
+	4900 3500 4900 3400
+Connection ~ 4600 3500
+Wire Wire Line
+	5200 3500 5200 3400
+Connection ~ 4900 3500
+$Comp
+L ATTINY13A-SSU U?
+U 1 1 5A46F956
+P 4400 4500
+F 0 "U?" H 3600 4900 50  0000 C CNN
+F 1 "ATTINY13A-SSU" H 5050 4100 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm" H 5000 4500 50  0001 C CIN
+F 3 "" H 3600 4850 50  0001 C CNN
+	1    4400 4500
+	1    0    0    -1  
+$EndComp
+Text GLabel 5300 2950 2    60   Input ~ 0
+VBAT
+Connection ~ 5200 2950
+Text GLabel 5500 4250 2    60   Input ~ 0
+VBAT
+Wire Wire Line
+	5400 4250 5500 4250
+$Comp
+L BC547 Q?
+U 1 1 5A46FCFB
+P 6950 4250
+F 0 "Q?" H 7150 4325 50  0000 L CNN
+F 1 "BC547" H 7150 4250 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-92_Molded_Narrow" H 7150 4175 50  0001 L CIN
+F 3 "" H 6950 4250 50  0001 L CNN
+	1    6950 4250
+	1    0    0    -1  
+$EndComp
+Text GLabel 3300 4650 0    60   Input ~ 0
+LED_DRIVE
+Wire Wire Line
+	3300 4650 3400 4650
+NoConn ~ 3400 4250
+NoConn ~ 3400 4350
+NoConn ~ 3400 4450
+NoConn ~ 3400 4550
+NoConn ~ 3400 4750
+$Comp
+L GND #PWR?
+U 1 1 5A46FF34
+P 5500 4750
+F 0 "#PWR?" H 5500 4500 50  0001 C CNN
+F 1 "GND" H 5500 4600 50  0000 C CNN
+F 2 "" H 5500 4750 50  0001 C CNN
+F 3 "" H 5500 4750 50  0001 C CNN
+	1    5500 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 4750 5500 4750
+Text GLabel 6700 4250 0    60   Input ~ 0
+LED_DRIVE
+Wire Wire Line
+	6700 4250 6750 4250
+$Comp
+L GND #PWR?
+U 1 1 5A470086
+P 7050 4550
+F 0 "#PWR?" H 7050 4300 50  0001 C CNN
+F 1 "GND" H 7050 4400 50  0000 C CNN
+F 2 "" H 7050 4550 50  0001 C CNN
+F 3 "" H 7050 4550 50  0001 C CNN
+	1    7050 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L R_Small R?
+U 1 1 5A4700E2
+P 6900 3900
+F 0 "R?" H 6930 3920 50  0000 L CNN
+F 1 "0R1" H 6930 3860 50  0000 L CNN
+F 2 "" H 6900 3900 50  0001 C CNN
+F 3 "" H 6900 3900 50  0001 C CNN
+	1    6900 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L R_Small R?
+U 1 1 5A47016F
+P 7200 3900
+F 0 "R?" H 7230 3920 50  0000 L CNN
+F 1 "0R1" H 7230 3860 50  0000 L CNN
+F 2 "" H 7200 3900 50  0001 C CNN
+F 3 "" H 7200 3900 50  0001 C CNN
+	1    7200 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6900 4000 8050 4000
+Wire Wire Line
+	7050 4000 7050 4050
+Connection ~ 7050 4000
+$Comp
+L LED D?
+U 1 1 5A4702FE
+P 7050 3600
+F 0 "D?" H 7050 3700 50  0000 C CNN
+F 1 "IR LED" H 7050 3500 50  0000 C CNN
+F 2 "" H 7050 3600 50  0001 C CNN
+F 3 "" H 7050 3600 50  0001 C CNN
+	1    7050 3600
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6450 3800 8050 3800
+Wire Wire Line
+	7050 3800 7050 3750
+Connection ~ 7050 3800
+$Comp
+L LED D?
+U 1 1 5A4703DC
+P 7350 3600
+F 0 "D?" H 7350 3700 50  0000 C CNN
+F 1 "IR LED" H 7350 3500 50  0000 C CNN
+F 2 "" H 7350 3600 50  0001 C CNN
+F 3 "" H 7350 3600 50  0001 C CNN
+	1    7350 3600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D?
+U 1 1 5A470423
+P 6750 3600
+F 0 "D?" H 6750 3700 50  0000 C CNN
+F 1 "IR LED" H 6750 3500 50  0000 C CNN
+F 2 "" H 6750 3600 50  0001 C CNN
+F 3 "" H 6750 3600 50  0001 C CNN
+	1    6750 3600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D?
+U 1 1 5A47046D
+P 6450 3600
+F 0 "D?" H 6450 3700 50  0000 C CNN
+F 1 "IR LED" H 6450 3500 50  0000 C CNN
+F 2 "" H 6450 3600 50  0001 C CNN
+F 3 "" H 6450 3600 50  0001 C CNN
+	1    6450 3600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D?
+U 1 1 5A4704B2
+P 7650 3600
+F 0 "D?" H 7650 3700 50  0000 C CNN
+F 1 "IR LED" H 7650 3500 50  0000 C CNN
+F 2 "" H 7650 3600 50  0001 C CNN
+F 3 "" H 7650 3600 50  0001 C CNN
+	1    7650 3600
+	0    -1   -1   0   
+$EndComp
+Connection ~ 6900 3800
+Wire Wire Line
+	6750 3750 6750 3800
+Connection ~ 6750 3800
+Wire Wire Line
+	7350 3800 7350 3750
+Connection ~ 7200 3800
+Wire Wire Line
+	7650 3800 7650 3750
+Connection ~ 7350 3800
+Wire Wire Line
+	6450 3450 7650 3450
+Connection ~ 6750 3450
+Connection ~ 7050 3450
+Connection ~ 7350 3450
+Text GLabel 7050 3350 1    60   Input ~ 0
+VBAT
+Wire Wire Line
+	7050 3450 7050 3350
+Wire Wire Line
+	7050 4450 7050 4550
+Wire Wire Line
+	6450 3800 6450 3750
+Text Notes 4150 2850 2    60   ~ 0
+Fake battery IR
+Wire Notes Line
+	6050 2700 6050 5050
+Wire Notes Line
+	2550 3850 6050 3850
+Text Label 8050 3800 0    60   ~ 0
+To_oscilloscope_pos
+Text Label 8050 4000 0    60   ~ 0
+To_oscilloscope_gnd
+Connection ~ 7650 3800
+Connection ~ 7200 4000
+$EndSCHEMATC
